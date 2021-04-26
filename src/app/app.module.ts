@@ -5,37 +5,44 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
-import { ProductComponent } from "./product/product.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
 import { CartService } from "./cart.service";
 import { CartComponent } from "./cart/cart.component";
 
 import { HttpClientModule } from "@angular/common/http";
-import { ShippingComponent } from "./shipping/shipping.component";
 import { ProductItemComponent } from "./product-item/product-item.component";
 import { WeatherApiComponent } from "./weather-api/weather-api.component";
 
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatButtonModule } from "@angular/material/button";
+import { MatInputModule } from "@angular/material/input";
+import { MatCardModule } from "@angular/material/card";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
     RouterModule.forRoot([
       { path: "", component: ProductItemComponent },
       { path: "products/:productId", component: ProductDetailsComponent },
-      { path: "cart", component: CartComponent },
-      { path: "shipping", component: ShippingComponent }
+      { path: "cart", component: CartComponent }
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent,
     ProductItemComponent,
     WeatherApiComponent
   ],
