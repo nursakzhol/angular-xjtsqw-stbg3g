@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
-import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductComponent } from "./product/product.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
 import { CartService } from "./cart.service";
@@ -14,6 +13,8 @@ import { CartComponent } from "./cart/cart.component";
 import { HttpClientModule } from "@angular/common/http";
 import { ShippingComponent } from "./shipping/shipping.component";
 import { ProductItemComponent } from "./product-item/product-item.component";
+import { WeatherApiComponent } from "./weather-api/weather-api.component";
+
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { ProductItemComponent } from "./product-item/product-item.component";
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    WeatherApiComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]
